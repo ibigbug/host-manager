@@ -1,0 +1,7 @@
+{
+  "output": "./hosts",
+  "domains": [
+    "douban.com",
+    "weibo.com"
+  ]
+}

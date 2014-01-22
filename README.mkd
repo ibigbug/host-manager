@@ -1,0 +1,32 @@
+Host-Manager
+---
+
+由于昨天出现的大规模DNS故障，看到[@tombkeeper](http://weibo.com/101174)昨天的微博说他平时常用的网站全部使用hosts解析。所以写了这么个小工具。
+
+#使用方法
+时间比较匆忙，还没有写setup.py
+
+直接clone到本地，运行app目录下的main：
+
+`$ ./main.py config.json`
+
+当前目录下生成解析好的hosts文件
+
+#配置示范
+`$ cat config.json`
+
+```javascript
+{
+  "output": "./hosts",
+  "domains": [
+    "douban.com",
+    "weibo.com"
+  ]
+}
+```
+
+#TODO（A Joke）
+1. 完成setup.py
+2. 支持使用自定义DNS：8.8.8.8（现在使用的是系统设置的DNS）
+3. 支持自动追加到系统hosts文件和删除
+4. Windows支持
